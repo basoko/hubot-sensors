@@ -44,7 +44,7 @@ module.exports = (robot) ->
       this._loadUserSensors()
 
     this._loadDefaultSensors = () ->
-      this._loadSensorsFolder __dirname + path.sep + DEFAULT_SENSORS_FOLDER
+      this._loadSensorsFolder path.resolve __dirname, DEFAULT_SENSORS_FOLDER
 
     this._loadUserSensors = () ->
       userSensors = process.env.HUBOT_SENSORS_FOLDER
@@ -62,7 +62,7 @@ module.exports = (robot) ->
         if filename is 'sensor'
           return
 
-        this._loadSensor(folder + path.sep + filename)
+        this._loadSensor path.resolve(folder, filename)
       )
 
     this._loadSensor = (file) ->
