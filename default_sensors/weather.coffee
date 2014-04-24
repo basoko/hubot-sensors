@@ -2,7 +2,7 @@ HubotSensor = require('../sensor')
 
 class WeatherSensor extends HubotSensor
   constructor: (@robot) ->
-    super(5000, false)
+    super(60 * 60 * 1000, false)
 
   check: () ->
     true
