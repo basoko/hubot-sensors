@@ -1,7 +1,7 @@
 {
   "name": "hubot-sensors",
   "description": "A hubot script to create and manage hubot sensors.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "David Basoco <basoko@gmail.com>",
   "license": "MIT",
   "keywords": [
