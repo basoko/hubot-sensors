@@ -22,7 +22,7 @@ module.exports = (robot) ->
 
   class HubotSensorsManager
     SENSORS_STORE = {}
-    DEFAULT_SENSORS_FOLDER = 'sensors'
+    DEFAULT_SENSORS_FOLDER = '../default_sensors'
     this.add = (sensor) ->
       robot.logger.debug "Adding sensor..."
       SENSORS_STORE[sensor.name()] = sensor
