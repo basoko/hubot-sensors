@@ -3,6 +3,8 @@ path = require('path')
 class HubotSensor
   constructor: (@freq, active = true) ->
     @_id = null
+    @room = process.env.HUBOT_SENSORS_ROOM
+
     @setup() if active
 
   setup: () ->
