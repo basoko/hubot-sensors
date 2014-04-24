@@ -2,6 +2,8 @@
 
 A hubot script to create and manage hubot sensors.
 
+[![Build Status](https://api.travis-ci.org/basoko/hubot-sensors.png?branch=master)](https://travis-ci.org/basoko/hubot-sensors)
+
 ## Setup
 
 Create in your hubot location a directory to put there your sensors.
