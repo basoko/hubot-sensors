@@ -14,6 +14,9 @@ class HubotSensor
 
   fire: () ->
 
+  notify: (text) ->
+    @robot.messageRoom @room, text
+
   name: () ->
     @constructor.name
 
