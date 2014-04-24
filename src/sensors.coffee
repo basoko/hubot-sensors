@@ -7,10 +7,11 @@
 #   HUBOT_SENSORS_FOLDER - Folder of the sensors to be loaded
 #
 # Commands:
-#   hubot sensor list           - List of loaded sensors
-#   hubot sensor list enabled   - List of enabled sensors
-#   hubot sensor list disabled  - List of disabled sensors
-#   hubot sensor enable (.*)    - Enable a disabled sensor
+#   hubot sensors list                    - List of loaded sensors
+#   hubot sensors list enabled            - List of enabled sensors
+#   hubot sensors list disabled           - List of disabled sensors
+#   hubot sensors enable <sensor_name>    - Enable a disabled sensor
+#   hubot sensors disable <sensor_name>   - Disable a enabled sensor
 #
 # Author:
 #   basoko
@@ -75,27 +76,27 @@ module.exports = (robot) ->
 
   HubotSensorsManager._loadSensors()
 
-  robot.respond /sensor list$/i, (msg) ->
+  robot.respond /sensors list$/i, (msg) ->
     response = 'Current list of sensors:\n'
     response += "#{sensor.name()}\t\t#{sensor.info()}\n" for sensor in HubotSensorsManager.list()
 
     msg.send response
 
-  robot.respond /sensor list enabled$/i, (msg) ->
+  robot.respond /sensors list enabled$/i, (msg) ->
     response = 'Enabled sensors:\n'
     response += "#{sensor.name()}\t\t#{sensor.info()}\n" for sensor in HubotSensorsManager.list() when sensor.isActive()
     msg.send response
 
-  robot.respond /sensor list disabled/i, (msg) ->
+  robot.respond /sensors list disabled/i, (msg) ->
     response = 'Disabled sensors:\n'
     response += "#{sensor.name()}\t\t#{sensor.info()}\n" for sensor in HubotSensorsManager.list() when not sensor.isActive()
 
     msg.send response
 
-  robot.respond /sensor enable (.*)/i, (msg) ->
+  robot.respond /sensors enable (.*)/i, (msg) ->
     sensor = HubotSensorsManager.get msg.match[1]
     sensor?.enable()
 
-  robot.respond /sensor disable (.*)/i, (msg) ->
+  robot.respond /sensors disable (.*)/i, (msg) ->
     sensor = HubotSensorsManager.get msg.match[1]
     sensor?.disable()
