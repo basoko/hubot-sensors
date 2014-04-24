@@ -14,8 +14,8 @@ class HubotSensor
 
   fire: () ->
 
-  notify: (text) ->
-    @robot.messageRoom @room, text
+  notify: (text, rooms = [@room]) ->
+    @robot.messageRoom(room, text) for room in [].concat rooms
 
   name: () ->
     @constructor.name
