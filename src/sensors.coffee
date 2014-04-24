@@ -7,11 +7,11 @@
 #   HUBOT_SENSORS_FOLDER - Folder of the sensors to be loaded
 #
 # Commands:
-#   hubot sensors list                    - List of loaded sensors
-#   hubot sensors list enabled            - List of enabled sensors
-#   hubot sensors list disabled           - List of disabled sensors
-#   hubot sensors enable <sensor_name>    - Enable a disabled sensor
-#   hubot sensors disable <sensor_name>   - Disable a enabled sensor
+#   hubot sensors list - List of loaded sensors
+#   hubot sensors list enabled - List of enabled sensors
+#   hubot sensors list disabled - List of disabled sensors
+#   hubot sensors enable <sensor_name> - Enable a disabled sensor
+#   hubot sensors disable <sensor_name> - Disable a enabled sensor
 #
 # Author:
 #   basoko
