@@ -50,4 +50,5 @@ In the default_sensors folder your will find some examples that can help you to 
 Will output:
 
     Current list of sensors:
+    CountDownSensor		A count down sensor fired each 10 minutes
     WeatherSensor    	Info of WeatherSensor
